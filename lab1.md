@@ -373,6 +373,7 @@ file as you will need to access these objects.
 ### Exercise 1
 
 **Implement the skeleton methods in:**
+
 ***
 
 * src/java/simpledb/storage/TupleDesc.java
@@ -380,20 +381,14 @@ file as you will need to access these objects.
 
 ***
 
-
 At this point, your code should pass the unit tests TupleTest and TupleDescTest. At this point, modifyRecordId() should
 fail because you havn't implemented it yet.
 
 ### 2.3. Catalog
 
-The catalog (class `Catalog` in SimpleDB) consists of a list of the tables and schemas of the tables that are currently
-in the database. You will need to support the ability to add a new table, as well as getting information about a
-particular table. Associated with each table is a `TupleDesc` object that allows operators to determine the types and
-number of fields in a table.
+The catalog (class `Catalog` in SimpleDB) consists of a list of the tables and schemas of the tables that are currently in the database. You will need to support the ability to add a new table, as well as getting information about a particular table. Associated with each table is a `TupleDesc` object that allows operators to determine the types and number of fields in a table.
 
-The global catalog is a single instance of `Catalog` that is allocated for the entire SimpleDB process. The global
-catalog can be retrieved via the method `Database.getCatalog()`, and the same goes for the global buffer pool (
-using `Database.getBufferPool()`).
+The global catalog is a single instance of `Catalog` that is allocated for the entire SimpleDB process. The global catalog can be retrieved via the method `Database.getCatalog()`, and the same goes for the global buffer pool ( using `Database.getBufferPool()`).
 
 ### Exercise 2
 
@@ -402,7 +397,7 @@ using `Database.getBufferPool()`).
 
 * src/java/simpledb/common/Catalog.java
 
-*** 
+***
 
 At this point, your code should pass the unit tests in CatalogTest.
 
@@ -542,7 +537,7 @@ disk.
 
 * src/java/simpledb/storage/HeapFile.java
 
-*** 
+***
 
 To read a page from disk, you will first need to calculate the correct offset in the file. Hint: you will need random
 access to the file in order to read and write pages at arbitrary offsets. You should not call BufferPool methods when
